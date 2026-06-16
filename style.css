@@ -1,0 +1,209 @@
+/* Computer Modern Roman — ChanticleerRoman */
+@font-face {
+  font-family: 'Computer Modern Roman';
+  src: url('assets/ChanticleerRoman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Computer Modern Roman', 'Georgia', 'Times New Roman', serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+header, section, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Header ── */
+header {
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.contact a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+.contact a:hover {
+  border-bottom-color: #1a1a1a;
+}
+
+.contact .sep {
+  margin: 0 0.6rem;
+  color: #ccc;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Entry ── */
+.entry {
+  margin-bottom: 1.2rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.entry-header .title {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.entry-header .title a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.entry-header .title a:hover {
+  border-bottom-color: #1a1a1a;
+}
+
+.entry-header .date {
+  font-style: italic;
+  color: #666;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.detail {
+  color: #444;
+  font-size: 0.98rem;
+  margin-top: 0.15rem;
+}
+
+.entry ul {
+  margin-top: 0.3rem;
+  padding-left: 1.4rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.entry ul li {
+  margin-bottom: 0.2rem;
+}
+
+/* ── Publications ── */
+.pub-title {
+  font-weight: bold;
+  font-size: 1.02rem;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.1rem;
+}
+
+.pub-venue {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.1rem;
+}
+
+.pub-venue a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.pub-venue a:hover {
+  border-bottom-color: #1a1a1a;
+}
+
+/* ── Skills ── */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills span {
+  border: 1px solid #d0d0d0;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.skills span:hover {
+  background: #f5f5f5;
+  border-color: #999;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  .subtitle { font-size: 1rem; }
+  .entry-header { flex-direction: column; }
+  .entry-header .date { margin-left: 0; margin-top: 0.15rem; }
+}
+
+/* ── Print ── */
+@media print {
+  header { padding-top: 0; }
+  body { font-size: 11pt; }
+}
